@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1063120089250",
+    "project_id": "fir-notifi-a2b80",
+    "storage_bucket": "fir-notifi-a2b80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063120089250:android:c0434edbb685e8a74127fb",
+        "android_client_info": {
+          "package_name": "com.tonic.testfirebasemessaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063120089250-679mcef7ded0kj5cam4bac2r57v5c79s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tonic.testfirebasemessaging",
+            "certificate_hash": "b3c1966c36ee0a70a617f634754a3f00db92c8e2"
+          }
+        },
+        {
+          "client_id": "1063120089250-o11sb6ajs25vi0i78fe5d08k38amgncj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJErZNc0qdTs2INLLEFXbThgIUdNSMAU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063120089250-o11sb6ajs25vi0i78fe5d08k38amgncj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
