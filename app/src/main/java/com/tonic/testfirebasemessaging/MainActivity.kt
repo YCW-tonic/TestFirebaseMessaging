@@ -17,6 +17,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        FirebaseMessaging.getInstance().subscribeToTopic("test")
+       FirebaseMessaging.getInstance().subscribeToTopic("test2")
     }
 }

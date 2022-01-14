@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.tonic.testfirebasemessaging.R
+import java.lang.Exception
 
 class InternalAppFirebaseMessagingService : FirebaseMessagingService(){
     private val mTAG = InternalAppFirebaseMessagingService::class.java.name
@@ -44,7 +45,7 @@ class InternalAppFirebaseMessagingService : FirebaseMessagingService(){
         }
 
         val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
-
+        Log.e(mTAG,"TITLE:${remoteMessage.notification!!.title}")
         notificationBuilder.setAutoCancel(true)
             //.setColor(ContextCompat.getColor(this, R.color.colorAccent))
             .setContentTitle(remoteMessage.notification!!.title)
@@ -58,5 +59,17 @@ class InternalAppFirebaseMessagingService : FirebaseMessagingService(){
 
         notificationManager.notify(1000, notificationBuilder.build())
 
+    }
+    private fun handleDataMessage(json: Map<String, String>) {
+        Log.e(mTAG, "push json: $json")
+        try {
+            val title = json["title"]
+            val message = json["body"]
+            val badge = json["badge"]
+            Log.e(mTAG, "title=$title, message=$message, badge=$badge")
+            // Display notication depends on received data
+        } catch (e: Exception) {
+            Log.e(mTAG, "Exception: " + e.message)
+        }
     }
 }
